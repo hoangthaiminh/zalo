@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://stc-zaloprofile.zdn.vn/favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Minhhhoang Zalo bio page - Design by @longathelstan and @Minhhhoang">
+    <meta property="og:title" content="Zalo - Minhhhoang" />
+    <meta property="og:description" content="Take the time to visit my site whenever you can!" />
+    <meta property="og:image" content="https://stc-zaloprofile.zdn.vn/favicon.ico"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500&display=swap" rel="stylesheet" />
+    <title>Zalo - Minhhhoang</title>
+    <script src="https://za.zdn.vn/v3/za.js"></script>
+    <script defer="defer" src="./main.1.0.6.js"></script>
+    <link href="./main.1.0.6.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Lexend', sans-serif;
+      }
+      #header {
+        display: flex;  
+        justify-content: center;
+        align-items: center; 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100%;
+        height: 65px;
+        padding: 15px; 
+        text-align: center; 
+        z-index: 2000; 
+        font-size: 1rem;
+        background-color: rgba(255, 255, 255, 0.6); 
+        color: #2d3748; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+      }
+
+      #avatar-image {
+	    position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: block;      /* tránh khoảng trắng dưới img inline */
+	    z-index: 3;          /* nằm trên vòng */
+      }
+	  
+	  .avatar-wrap{
+	    position: relative;
+	    width: 2.9rem;
+	    height: 2.9rem;
+	    margin: 1%;
+	    /* overflow: visible;  // mặc định đã visible, chỉ bật nếu bị cắt */
+	  }
+	  
+	  .avatar-wrap::before{
+		  content: "";
+		  display: inline-block;
+		  position: absolute;
+		  inset: -.07rem;
+		  border-radius: 50%;
+		  background: conic-gradient(
+			from 0deg,
+			#ff0057, #ff7b00, #ffea00, #00ff85, #00c3ff, #7a00ff, #ff0057
+		  );
+		  animation: spin 2s linear infinite;
+		  filter: drop-shadow(0 0 4px rgba(0,0,0,.15)); /* nhẹ nhàng tinh tế */
+		  z-index: 1;                  /* nằm dưới ảnh */
+		  pointer-events: none;
+		}
+
+		@keyframes spin{
+		  to{ transform: rotate(360deg); }
+		}
+
+      #footer {
+        position: fixed; 
+        bottom: 0; 
+        left: 0; 
+        width: 100%;
+        padding: 20px; 
+        text-align: center;
+        z-index: 1000; 
+        background-color: rgba(255, 255, 255, 0.6); 
+        color: #2d3748;
+        font-size: 0.95rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        backdrop-filter: blur(10px);
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .gradient-animation {
+        background-size: 200% 200%;
+        animation: gradient 2s ease infinite;
+      }
+      
+      .cursor-follow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        background: radial-gradient(circle, rgba(141, 165, 201, 0.23), transparent 80%);
+        background-size: 150% 150%;
+        transition: background-position 0.03s ease;
+        z-index: 100;
+      }
+	  .fill-div {
+	    position: absolute;
+	    bottom: 0;              /* vì là footer */
+	    left: 0;
+	    width: 100%;
+	    height: 100%;           /* chiều cao footer */
+	    /*border: 3px solid #ccc;*/
+  
+	    display: flex;
+	    align-items: center;    /* căn giữa theo chiều dọc */
+		justify-content: space-between;
+	  }
+      #typing-text {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: .15em solid #7782BE;
+		z-index: 99999;
+      }
+	  
+	  @keyframes charactershow {
+	    from {
+		  opacity: 0;
+		}
+		to {
+		  opacity: 1;
+		}
+	  }
+      
+    </style>
+  </head>
+  <body onmousemove="handleMouseMove(event)">
+    <a id="header" href="https://minhhh.ct.ws">
+	  <div class="fill-div">
+		  <div class="avatar-wrap"><img
+		  loading="lazy"
+		  class="item-div"
+		  id="avatar-image"
+		  src="https://s120-ava-talk.zadn.vn/7/7/e/f/61/120/8c43d9c074302dbcc96da6ee2b1a5f7d.jpg"
+		  alt=""
+		  aria-hidden="true"/></div>
+		  <div class="avatar-wrap"><img
+		  loading="lazy"
+		  class="item-div"
+		  id="avatar-image"
+		  src="https://s240-ava-talk.zadn.vn/4/3/8/f/12/240/333e8bcdde138fa433431155c3d3704c.jpg"
+		  alt=""
+		  aria-hidden="true"/></div>
+	  </div>
+      <span id="typing-text"></span>
+	  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+		  <filter id="noiseFilterWhite">
+			<feTurbulence type="fractalNoise" baseFrequency="0.56" numOctaves="4" stitchTiles="stitch"/>
+			<feColorMatrix type="matrix" 
+			  values="1 0 0 0 0
+					  0 1 0 0 0
+					  0 0 1 0 0
+					  0 0 0 -1 1"/> <!-- đảo màu noise thành trắng -->
+			<feBlend in="SourceGraphic" mode="screen"/> <!-- blend kiểu sáng -->
+		  </filter>
+	  </svg>
+    </a>
+    
+    <div id="footer">
+      © Copyright 2024 - 2025 <a href="https://lowng.site/">@longathelstan</a> - Minhhhoang ft. zalo All right Reserved.
+    </div>
+    
+    <div id="root">
+      <script>
+        window.pageInfo = {
+          "type": 2,
+          "name": "Thái Minh Hoàng",
+          "avatar": "https://s120-ava-talk.zadn.vn/7/7/e/f/61/120/8c43d9c074302dbcc96da6ee2b1a5f7d.jpg",
+          "thumbnail": "./qrcodeweb.png",
+          "description": "Chúng ta muốn làm việc không phải vì nó dễ,\nMà bởi vì chúng ta luôn tin rằng việc đó sẽ dễ thôi.\nPhotos 👉 https://minhhh.ct.ws\nSĐT 👉 0343080458",
+          "qrCodeUrl": "./qrcodeweb.png",
+		  "background": "./background.png",
+          "user": {
+            "isBusiness": false,
+            "showBanner": false
+          },
+          "messageInfo": {
+            "type": "phone",
+            "argv": "0343080458",
+            "hasZWebSession": true,
+            "convId": "5207876207076590541"
+          },
+        };
+        window.pageInfo.index = 2;
+
+		changed_lang_global = false;
+
+        function handleMouseMove(event) {
+          const { clientX, clientY } = event;
+          const { innerWidth, innerHeight } = window;
+          
+          const xPos = (clientX / innerWidth) * 100;
+          const yPos = (clientY / innerHeight) * 100;
+          
+          const cursorFollow = document.querySelector('.cursor-follow');
+          cursorFollow.style.backgroundPosition = `${xPos}% ${yPos}%`;
+        }
+
+        const typingText = document.getElementById("typing-text");
+		const lang_hd = document.querySelector(".lang__header");
+
+        async function typeText(text, duration) {
+          typingText.innerHTML = "";
+		  
+          for (let i = 0; i < text.length; i++) {
+		    const charr = document.createElement("span");
+		    charr.style.animation = "charactershow 0.378s ease";
+		    charr.innerText = text.charAt(i);
+			charr.id = `charr-${i}`;
+            typingText.appendChild(charr);
+            await new Promise(resolve => setTimeout(resolve, 73)); 
+          }
+		  const allchars = typingText.querySelectorAll("*");
+		  allchars.forEach(el => el.remove());
+		  typingText.innerText = text;
+        }
+		
+		async function removeText() {
+		  let dodaigoc = typingText.innerText.length;
+		  while(typingText.innerText.length > 0) {
+		    typingText.innerText = typingText.innerText.slice(0, -1);
+			await new Promise(resolve => setTimeout(resolve, parseInt((8 + typingText.innerText.length) * 37 / dodaigoc))); 
+		  }
+		}
+		
+		<!-- const items = document.querySelectorAll('.item-div'); -->
+		<!-- const n = items.length; -->
+
+		<!-- items.forEach((item, i) => { -->
+		  <!-- const percent = (i / (n - 1)) * 100; // từ 0% -> 100% -->
+		  <!-- item.style.alignSelf = "flex-start"; // mặc định trái -->
+		  <!-- item.style.marginLeft = percent + "%"; // dịch dần từ trái -> phải -->
+		<!-- }); -->
+
+        async function animateText() {
+          while (true) {
+            await typeText("Profile Zalo của tôi!", 3); 
+            await new Promise(resolve => setTimeout(resolve, 1500));
+			await removeText();
+            await typeText("Cảm ơn dev @longathelstan!", 3);
+            await new Promise(resolve => setTimeout(resolve, 1600));
+			await removeText();
+          }
+        }
+
+        animateText();
+      </script>
+    </div>
+    <div class="cursor-follow"></div>
+  </body>
+</html>
