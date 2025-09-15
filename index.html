@@ -5,14 +5,14 @@
     <link rel="icon" href="https://stc-zaloprofile.zdn.vn/favicon.ico" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Minhhhoang Zalo bio page - Design by @longathelstan and @Minhhhoang">
+    <meta name="description" content="<Enter your content description here>">
     <meta property="og:title" content="Zalo - Minhhhoang" />
-    <meta property="og:description" content="Take the time to visit my site whenever you can!" />
+    <meta property="og:description" content="<Enter your content description here>" />
     <meta property="og:image" content="https://stc-zaloprofile.zdn.vn/favicon.ico"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500&display=swap" rel="stylesheet" />
-    <title>Zalo - Minhhhoang</title>
+    <title>Enter Title Here</title>
     <script src="https://za.zdn.vn/v3/za.js"></script>
     <script defer="defer" src="./main.1.0.6.js"></script>
     <link href="./main.1.0.6.css" rel="stylesheet" />
@@ -152,51 +152,51 @@
     </style>
   </head>
   <body onmousemove="handleMouseMove(event)">
-    <a id="header" href="https://minhhh.ct.ws">
+    <a id="header" href="<Enter your web link here>">
 	  <div class="fill-div">
 		  <div class="avatar-wrap"><img
 		  loading="lazy"
 		  class="item-div"
 		  id="avatar-image"
-		  src="https://s120-ava-talk.zadn.vn/7/7/e/f/61/120/8c43d9c074302dbcc96da6ee2b1a5f7d.jpg"
+		  src="<Enter your Avatar link here>"
 		  alt=""
 		  aria-hidden="true"/></div>
 		  <div class="avatar-wrap"><img
 		  loading="lazy"
 		  class="item-div"
 		  id="avatar-image"
-		  src="https://s240-ava-talk.zadn.vn/4/3/8/f/12/240/333e8bcdde138fa433431155c3d3704c.jpg"
+		  src="<Enter the contributor's Avatar link here (If available)>"
 		  alt=""
 		  aria-hidden="true"/></div>
 	  </div>
       <span id="typing-text"></span>
-	  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<!-- 	  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
 		  <filter id="noiseFilterWhite">
 			<feTurbulence type="fractalNoise" baseFrequency="0.56" numOctaves="4" stitchTiles="stitch"/>
 			<feColorMatrix type="matrix" 
 			  values="1 0 0 0 0
 					  0 1 0 0 0
 					  0 0 1 0 0
-					  0 0 0 -1 1"/> <!-- đảo màu noise thành trắng -->
-			<feBlend in="SourceGraphic" mode="screen"/> <!-- blend kiểu sáng -->
+					  0 0 0 -1 1"/>
+			<feBlend in="SourceGraphic" mode="screen"/>
 		  </filter>
-	  </svg>
+	  </svg> -->
     </a>
     
     <div id="footer">
-      © Copyright 2024 - 2025 <a href="https://lowng.site/">@longathelstan</a> - Minhhhoang ft. zalo All right Reserved.
+      Enter footer here
     </div>
     
     <div id="root">
       <script>
         window.pageInfo = {
           "type": 2,
-          "name": "Thái Minh Hoàng",
-          "avatar": "https://s120-ava-talk.zadn.vn/7/7/e/f/61/120/8c43d9c074302dbcc96da6ee2b1a5f7d.jpg",
-          "thumbnail": "./qrcodeweb.png",
-          "description": "Chúng ta muốn làm việc không phải vì nó dễ,\nMà bởi vì chúng ta luôn tin rằng việc đó sẽ dễ thôi.\nPhotos 👉 https://minhhh.ct.ws\nSĐT 👉 0343080458",
-          "qrCodeUrl": "./qrcodeweb.png",
-		  "background": "./background.png",
+          "name": "<Enter your Zalo name here>",
+          "avatar": "<Your Zalo avatar here>",
+          "thumbnail": "<Your thumbnail here>",
+          "description": "<Your description here>",
+          "qrCodeUrl": "<Your Zalo qr here>",
+		  "background": "<Your background here, e.g: './background.png'>",
           "user": {
             "isBusiness": false,
             "showBanner": false
@@ -249,22 +249,13 @@
 			await new Promise(resolve => setTimeout(resolve, parseInt((8 + typingText.innerText.length) * 37 / dodaigoc))); 
 		  }
 		}
-		
-		<!-- const items = document.querySelectorAll('.item-div'); -->
-		<!-- const n = items.length; -->
-
-		<!-- items.forEach((item, i) => { -->
-		  <!-- const percent = (i / (n - 1)) * 100; // từ 0% -> 100% -->
-		  <!-- item.style.alignSelf = "flex-start"; // mặc định trái -->
-		  <!-- item.style.marginLeft = percent + "%"; // dịch dần từ trái -> phải -->
-		<!-- }); -->
 
         async function animateText() {
           while (true) {
-            await typeText("Profile Zalo của tôi!", 3); 
+            await typeText("<Type text line 1>", 3); 
             await new Promise(resolve => setTimeout(resolve, 1500));
 			await removeText();
-            await typeText("Cảm ơn dev @longathelstan!", 3);
+            await typeText("<Type text line 2>", 3);
             await new Promise(resolve => setTimeout(resolve, 1600));
 			await removeText();
           }
@@ -275,4 +266,5 @@
     </div>
     <div class="cursor-follow"></div>
   </body>
+
 </html>
