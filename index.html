@@ -252,12 +252,17 @@
 
         async function animateText() {
           while (true) {
-            await typeText("<Type text line 1>", 3); 
-            await new Promise(resolve => setTimeout(resolve, 1500));
+			// Line1
+            await typeText("<Type text line 1>", 3);
+            await new Promise(resolve => setTimeout(resolve, 1500)); // Wait 1.5 seconds before typing the next line
 			await removeText();
+			// -------------
+			// Line2
             await typeText("<Type text line 2>", 3);
-            await new Promise(resolve => setTimeout(resolve, 1600));
+            await new Promise(resolve => setTimeout(resolve, 1600)); // Wait 1.6 seconds before typing the next line
 			await removeText();
+			// -------------
+			// Add more line if u want!
           }
         }
 
@@ -268,4 +273,5 @@
   </body>
 
 </html>
+
 
